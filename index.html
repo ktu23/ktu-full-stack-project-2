@@ -56,18 +56,71 @@
           </fieldset>
         </form>
       </section>
-      <section id="newgameshow" class="hide">
-        <h4>Play a Tic Tac Toe Game!</h4>
-        <form id="new-game">
-          <fieldset>
-            <!-- <legend>New Game</legend> -->
-            <button class="btn btn-primary">New Game</button>
-          </fieldset>
-        </form>
-      </section>
+
+
+      <h1>Jokes CRUD</h1>
+      <main>
+        <section>
+          <h2> Get All jokes</h2>
+          <button id="jokes-index">Get All jokes</button>
+          <hr>
+          
+          <h2>Get One joke</h2>
+          <form id="jokes-show">
+            <input type="text"  name="joke[id]" placeholder="joke ID" required>
+
+           <!-- <input type="text"  name="author[name]" placeholder="Author's Name"> --> 
+
+            <!-- Since this button is inside of form, it has the type="Submit" by default.
+              Which means if the button is clicked, the form is submitted. -->
+            <button> Get Joke</button>
+          </form>
+        </section>
+        <hr>
+
+        <section>
+          <h2> Create One Joke</h2>
+          <form id="jokes-add">
+            
+            <input type="text" name="joke[title]" placeholder="Title">
+            <input type="text" name="joke[text]" placeholder="Text">
+            <button> Add joke</button>
+          </form>
+        </section>
+
+        
+        <section>
+          <h2> Destroy One Joke</h2>
+          <form id="jokes-destroy">
+            <input type="text" name="joke[id]" placeholder="joke ID">
+            <button> Delete joke</button>
+          </form>
+        </section>
+          
+        <br>
+
+        <section>
+          <h2> Update One Joke</h2>
+          <form id="jokes-update">
+            <input type="text" name="joke[id]" placeholder="joke ID">
+            <input type="text" name="joke[title]" placeholder="Title">
+            <input type="text" name="joke[text]" placeholder="Text">
+            <button> Update joke</button>
+          </form>
+        </section>
 
 
 
+
+
+
+
+    <!-- create a section for our user feedback -->
+    <section>
+      <div id="error-message"> </div>
+      <div id="jokes-display"> </div>
+    </section>
+    </div>
     </body>
 </html>
 

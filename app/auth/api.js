@@ -45,20 +45,8 @@ const signOut = function () {
   })
 }
 
-// create a function for newJoke
-const newJoke = function () {
-  return $.ajax({
-    url: `${config.apiUrl}/jokes`,
-    method: 'POST',
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
-
 module.exports = {
   signUp,
   signIn,
-  signOut,
-  newJoke
+  signOut
 }
