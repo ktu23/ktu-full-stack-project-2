@@ -49,6 +49,16 @@
       <!-- After Sign In -->
       <!-- <section id="after-sign-in"> -->
         <section id="signoutbutton" class="hide">
+          
+          <form id="change-password" class="border">
+            <fieldset>
+              <legend>Change Password</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password" required>
+              <input type="password" name="passwords[new]" placeholder="New Password" required>
+              <button class="btn btn-primary">Change Password</button>
+            </fieldset>
+          </form>
+
         <form id="sign-out">
           <fieldset>
             <legend>Sign Out</legend>
@@ -57,10 +67,13 @@
         </form>
       </section>
 
+      
 
-      <h1>Jokes CRUD</h1>
+
+
       <main>
-        <section>
+        <section id="getalljokes" class="hide">
+          <h1>Jokes CRUD</h1>
           <h2> Get All jokes</h2>
           <button id="jokes-index">Get All jokes</button>
           <hr>
@@ -78,7 +91,7 @@
         </section>
         <hr>
 
-        <section>
+        <section id="create" class="hide">
           <h2> Create One Joke</h2>
           <form id="jokes-add">
             
@@ -88,10 +101,10 @@
           </form>
         </section>
 
-        
-        <section>
+
+        <section id="destroy" class="hide">
           <h2> Destroy One Joke</h2>
-          <form id="jokes-destroy">
+          <form id="jokes-delete">
             <input type="text" name="joke[id]" placeholder="joke ID">
             <button> Delete joke</button>
           </form>
@@ -99,7 +112,7 @@
           
         <br>
 
-        <section>
+        <section id="update" class="hide">
           <h2> Update One Joke</h2>
           <form id="jokes-update">
             <input type="text" name="joke[id]" placeholder="joke ID">
@@ -108,10 +121,6 @@
             <button> Update joke</button>
           </form>
         </section>
-
-
-
-
 
 
 

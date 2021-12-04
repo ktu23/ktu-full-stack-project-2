@@ -1,1 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+#after-sign-in {
+  // make it not display on the page to start off with
+  display: none;
+}
+
+.hide {
+  display: none;
+
+}

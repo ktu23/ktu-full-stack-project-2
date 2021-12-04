@@ -78,7 +78,7 @@ const onShowFailure = function (error) {
   console.error('onShowFailure ran. Error is :', error)
 }
 
-const onDestroySuccess = function () {
+const onDeleteSuccess = function () {
   $('#jokes-display').text('Joke successfully deleted')
   $('#jokes-display').removeClass()
   $('#jokes-display').addClass('text-success')
@@ -86,7 +86,7 @@ const onDestroySuccess = function () {
   console.log('Joke successfully deleted')
 }
 
-const onDestroyFailure = function (error) {
+const onDeleteFailure = function (error) {
   $('#error-message').text('Error on deleting joke')
   $('#error-message').removeClass()
   $('#error-message').addClass('text-danger')
@@ -115,8 +115,8 @@ module.exports = {
   onIndexFailure,
   onShowSuccess,
   onShowFailure,
-  onDestroySuccess,
-  onDestroyFailure,
+  onDeleteSuccess,
+  onDeleteFailure,
   onUpdateSuccess,
   onUpdateFailure
 }

@@ -54,7 +54,11 @@ const signInSuccess = function(responseData) {
   $('#after-sign-in').show()
 
   $('#signoutbutton').show()
-  $('#newjokeshow').show()
+  $('#getalljokes').show()
+  $('#create').show()
+  $('#destroy').show()
+  $('#hide').show()
+  $('#update').show()
 
   // hide all the content from main page after logging in
   $('#after-new-joke').hide()
@@ -90,11 +94,14 @@ const signOutSuccess = function(responseData) {
   // After we sign out, show the section with the id `before-sign-in`
   $('#before-sign-in').show()
   // After we sign out, hide the section with the id `after-sign-in`
-  $('#newjokeshow').hide()
-  $('#after-new-joke').hide()
   $('#signoutbutton').hide()
-  $('#jokeOver').hide()
-  $('#error-message').text('Welcome to the joke! A new joke has started.').hide()
+  $('#getalljokes').hide()
+  $('#create').hide()
+  $('#destroy').hide()
+  $('#hide').hide()
+  $('#update').hide()
+
+  $('#error-message').text('Welcome to the joke factory!').hide()
 
   console.log('responseData is', responseData)
 }
@@ -111,26 +118,27 @@ const signOutFailure = function (error) {
   console.error('error is', error)
 }
 
-// create a new const for newjokeStart to display what it will do when newjoke button is clicked
-const newjokeStart = function (error) {
-  // tell the user it was successful - new joke has started
-  $('#error-message').text('Welcome to the joke! A new joke has started.')
+const changePasswordSuccess = function(responseData) {
+  // tell the user it was successful
+  $('#jokes-display').text('Changed password successfully!')
+
+  // remove existing classes, then add a green text-success class from bootstrap
+  $('#jokes-display').removeClass()
+  $('#jokes-display').addClass('text-success')
+
+  // clear (reset) all of the forms
+  $('form').trigger('reset')
+
+  console.log('responseData is', responseData)
+}
+
+const changePasswordFailure = function (error) {
+  // tell the user it was successful
+  $('#error-message').text('Changing passwords failed')
 
   // remove existing classes, then add a red text-danger class from bootstrap
   $('#error-message').removeClass()
-  $('#error-message').addClass('text-success')
-
-  // After clicking new joke, hide all previous sections and show only joke
-  $('#before-sign-in').hide()
-  $('#newjokeshow').hide()
-
-  $('#after-new-joke').show()
-  $('#signoutbutton').show()
-
-  // on 'play' - reset the joke board with empty divs --- '' string
-  $('.play').text('')
-
-  $('#jokes-display').text('')
+  $('#error-message').addClass('text-danger')
 
   // print the error
   console.error('error is', error)
@@ -143,5 +151,6 @@ module.exports = {
   signInFailure,
   signOutSuccess,
   signOutFailure,
-  newjokeStart
+  changePasswordSuccess,
+  changePasswordFailure
 }

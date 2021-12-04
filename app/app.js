@@ -9,6 +9,7 @@ $(() => {
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('#change-password').on('submit', authEvents.onChangePassword)
 
   // select the jokes-index button ($('#jokes-index'))
   // whenever (on) a click event occurs,run the function
@@ -17,7 +18,7 @@ $(() => {
   // select the jokes-show form ($('#jokes-show'))
   // on a submit event, run the `onShowjoke` event handler function
   $('#jokes-show').on('submit', jokeEvents.onShowJoke)
-  $('#jokes-destroy').on('submit', jokeEvents.onDestroyJoke)
+  $('#jokes-delete').on('submit', jokeEvents.onDeleteJoke)
   $('#jokes-update').on('submit', jokeEvents.onUpdateJoke)
   $('#jokes-add').on('submit', jokeEvents.onAddJoke)
 

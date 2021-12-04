@@ -48,8 +48,9 @@ const onDeleteJoke = function (event) {
   const id = formData.joke.id
 
   api.destroy(id)
-    .then(ui.onDestroySuccess)
-    .catch(ui.onDestroyFailure)
+    .then(ui.onDeleteSuccess)
+    // .then(console.log)
+    .catch(ui.onDeleteFailure)
 }
 
 const onUpdateJoke = function (event) {
