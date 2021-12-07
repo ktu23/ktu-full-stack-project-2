@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Joke Factory</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,9 +11,10 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body style="background-color: #dfe7fd">
+    <!-- <body style="background-color: #dfe7fd"> -->
+    <body style="background-color: #bde0fe">
       <div class="centerwhole">
-      <h1>Kevin's Full Stack Project </h1>
+      <h1>Joke Factory </h1>
       <!-- <h3>Welcome / Jokes</h3> -->
 
       <section id="before-sign-in">
@@ -49,7 +50,7 @@
       <!-- After Sign In -->
       <!-- <section id="after-sign-in"> -->
         <section id="signoutbutton" class="hide">
-          
+
           <form id="change-password" class="border">
             <fieldset>
               <legend>Change Password</legend>
@@ -66,15 +67,13 @@
           </fieldset>
         </form>
       </section>
-
+      <br> <br>
       
-
-
-
       <main>
         <section id="getalljokes" class="hide">
-          <h1>Jokes CRUD</h1>
-          <h2> Get All jokes</h2>
+          <h2>Joke Factory - CRUD</h2>
+          <br>
+          <h4> Get All Jokes</h4>
           <button id="jokes-index">Get All jokes</button>
           <hr>
           
@@ -90,37 +89,42 @@
           </form>
         </section>
         <hr>
+        <br>
 
         <section id="create" class="hide">
-          <h2> Create One Joke</h2>
+          <h4> Create One Joke</h4>
           <form id="jokes-add">
             
             <input type="text" name="joke[title]" placeholder="Title">
             <input type="text" name="joke[text]" placeholder="Text">
-            <button> Add joke</button>
+            <button> Add Joke</button>
           </form>
         </section>
+        <hr>
+        <br>
 
 
         <section id="destroy" class="hide">
-          <h2> Destroy One Joke</h2>
+          <h4> Destroy One Joke</h4>
           <form id="jokes-delete">
             <input type="text" name="joke[id]" placeholder="joke ID">
-            <button> Delete joke</button>
+            <button> Delete Joke</button>
           </form>
         </section>
-          
+
         <br>
+        <hr>
 
         <section id="update" class="hide">
-          <h2> Update One Joke</h2>
+          <h4> Update One Joke</h4>
           <form id="jokes-update">
             <input type="text" name="joke[id]" placeholder="joke ID">
             <input type="text" name="joke[title]" placeholder="Title">
             <input type="text" name="joke[text]" placeholder="Text">
-            <button> Update joke</button>
+            <button> Update Joke</button>
           </form>
         </section>
+        <hr>
 
 
 
@@ -129,7 +133,9 @@
       <div id="error-message"> </div>
       <div id="jokes-display"> </div>
     </section>
+  </main>
     </div>
+
     </body>
 </html>
 

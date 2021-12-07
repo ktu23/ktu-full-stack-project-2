@@ -78,7 +78,6 @@ const onChangePassword = function (event) {
     .catch(ui.changePasswordFailure)
 }
 
-
 module.exports = {
   onSignUp,
   onSignIn,
