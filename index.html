@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Joke Factory</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <!-- <body style="background-color: #dfe7fd"> -->
+    <body style="background-color: #bde0fe">
+      <div class="centerwhole">
+      <h1>Joke Factory </h1>
+      <!-- <h3>Welcome / Jokes</h3> -->
+
+      <section id="before-sign-in">
+        <!-- Sign up form goes here -->
+        <form id="sign-up">
+          <fieldset>
+            <legend>Sign Up</legend>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+            <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+
+            <button class="btn btn-primary">Sign Up</button>
+          </fieldset>
+
+        </form>
+
+        <!-- Sign in form goes here -->
+        <form id="sign-in">
+          <fieldset>
+            <legend>Sign In</legend>
+            <input type="email" name="credentials[email]" placeholder="Email" required>
+            <input type="password" name="credentials[password]" placeholder="Password" required>
+
+
+            <button class="btn btn-primary">Sign In</button>
+          </fieldset>
+
+          <br>
+          <br>
+          <br>
+        </form>
+      </section>
+      <!-- After Sign In -->
+      <!-- <section id="after-sign-in"> -->
+        <section id="signoutbutton" class="hide">
+
+          <form id="change-password" class="border">
+            <fieldset>
+              <legend>Change Password</legend>
+              <input type="password" name="passwords[old]" placeholder="Old Password" required>
+              <input type="password" name="passwords[new]" placeholder="New Password" required>
+              <button class="btn btn-primary">Change Password</button>
+            </fieldset>
+          </form>
+
+        <form id="sign-out">
+          <fieldset>
+            <legend>Sign Out</legend>
+            <button class="btn btn-primary">Sign Out</button>
+          </fieldset>
+        </form>
+      </section>
+      <br> <br>
+      
+      <main>
+        <section id="getalljokes" class="hide">
+          <h2>Joke Factory - CRUD</h2>
+          <br>
+          <h4> Get All Jokes</h4>
+          <button id="jokes-index">Get All jokes</button>
+          <hr>
+          
+          <h2>Get One joke</h2>
+          <form id="jokes-show">
+            <input type="text"  name="joke[id]" placeholder="joke ID" required>
+
+           <!-- <input type="text"  name="author[name]" placeholder="Author's Name"> --> 
+
+            <!-- Since this button is inside of form, it has the type="Submit" by default.
+              Which means if the button is clicked, the form is submitted. -->
+            <button> Get Joke</button>
+          </form>
+        </section>
+        <hr>
+        <br>
+
+        <section id="create" class="hide">
+          <h4> Create One Joke</h4>
+          <form id="jokes-add">
+            
+            <input type="text" name="joke[title]" placeholder="Title">
+            <input type="text" name="joke[text]" placeholder="Text">
+            <button> Add Joke</button>
+          </form>
+        </section>
+        <hr>
+        <br>
+
+
+        <section id="destroy" class="hide">
+          <h4> Destroy One Joke</h4>
+          <form id="jokes-delete">
+            <input type="text" name="joke[id]" placeholder="joke ID">
+            <button> Delete Joke</button>
+          </form>
+        </section>
+
+        <br>
+        <hr>
+
+        <section id="update" class="hide">
+          <h4> Update One Joke</h4>
+          <form id="jokes-update">
+            <input type="text" name="joke[id]" placeholder="joke ID">
+            <input type="text" name="joke[title]" placeholder="Title">
+            <input type="text" name="joke[text]" placeholder="Text">
+            <button> Update Joke</button>
+          </form>
+        </section>
+        <hr>
+
+
+
+    <!-- create a section for our user feedback -->
+    <section>
+      <div id="error-message"> </div>
+      <div id="jokes-display"> </div>
+    </section>
+  </main>
+    </div>
+
+    </body>
+</html>
+
+
